@@ -1,0 +1,12 @@
+.root{
+  box-sizing: border-box;
+}
+
+body {
+    background: #282c34;
+    font-size: 2vmin;
+    font-family: JetBrains Mono, monospace;
+    justify-content: center;
+    align-items: center;
+    color: #e4bb68;
+  }

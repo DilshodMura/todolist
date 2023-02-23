@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './Components/Header/Header';
+import AddToDo from './Components/AddToDo/AddToDo';
+import ToDoList from './Components/ToDoList/ToDoList';
+import { useState } from 'react';
+import './global-night-mode.css';
+import { Container } from 'react-bootstrap';
 
 function App() {
+
+  const [todo, setTodo] = useState(() => {
+    const storedTodo = localStorage.getItem('todo');
+    return storedTodo ? JSON.parse(storedTodo) : [];
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Header />
+      <AddToDo todo={todo} setTodo={setTodo} />
+      <ToDoList todo={todo} setTodo={setTodo} />
+    </Container>
   );
 }
 
