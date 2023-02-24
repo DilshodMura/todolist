@@ -2,7 +2,7 @@
   "name": "todolist",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dilshodmura.github.io/todolist/",
+  "homepage": "./",
   "dependencies": {
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
